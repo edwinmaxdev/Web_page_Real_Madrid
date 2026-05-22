@@ -1,26 +1,18 @@
 :root{
-    /* COLORES */
     --color-primario: #0a0f2c;
     --color-secundario: #111827;
     --color-dorado: #d4af37;
     --color-blanco: #ffffff;
     --color-gris: #94a3b8;
 
-    /* FUENTES */
     --fuente-principal: "Barlow", sans-serif;
     --fuente-titulo: "Bebas Neue", sans-serif;
-
-    /* SOMBRA */
     --sombra: 0 8px 20px rgba(0,0,0,.3);
 
-    /* TRANSICION */
     --transicion: all .3s ease;
 }
 
 
-/* ========================= */
-/* RESET */
-/* ========================= */
 
 *{
     margin: 0;
@@ -34,8 +26,6 @@ html{
 }
 
 
-/* MEJORA GENERAL */
-
 body{
     font-family: var(--fuente-principal);
     background: var(--color-primario);
@@ -45,10 +35,6 @@ body{
 
     transition: background .3s ease, color .3s ease;
 }
-
-/* ========================= */
-/* HEADER */
-/* ========================= */
 
 .header{
     width: 100%;
@@ -78,7 +64,6 @@ body{
 }
 
 
-/* LOGO */
 
 .logo img{
     width: 70px;
@@ -91,7 +76,6 @@ body{
 }
 
 
-/* NAVBAR */
 
 .navbar ul{
     display: flex;
@@ -122,10 +106,6 @@ body{
     font-size: 1.2rem;
 }
 
-
-/* ========================= */
-/* HERO */
-/* ========================= */
 
 .hero{
     min-height: 100vh;
@@ -166,7 +146,6 @@ body{
 }
 
 
-/* BOTON */
 
 .btn{
     display: inline-block;
@@ -185,10 +164,6 @@ body{
     box-shadow: var(--sombra);
 }
 
-
-/* ========================= */
-/* SECCIONES */
-/* ========================= */
 
 section{
     padding: 100px 5%;
@@ -209,9 +184,6 @@ section{
 }
 
 
-/* ========================= */
-/* ABOUT */
-/* ========================= */
 
 .about-content{
     max-width: 900px;
@@ -227,9 +199,6 @@ section{
 }
 
 
-/* ========================= */
-/* TITLES */
-/* ========================= */
 
 .titles-container{
     display: grid;
@@ -271,7 +240,6 @@ section{
 }
 
 
-/* IMAGENES */
 
 .title-card img{
     width: 100%;
@@ -288,9 +256,6 @@ section{
 }
 
 
-/* ========================= */
-/* FOOTER */
-/* ========================= */
 
 .footer{
     background: #050816;
@@ -303,189 +268,6 @@ section{
 .footer p{
     color: var(--color-gris);
 }
-/* ========================= */
-/* JUGADORES */
-/* ========================= */
-
-.players-banner{
-    min-height: 60vh;
-    background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.7)),
-    url("https://images.unsplash.com/photo-1508098682722-e99c643e7485?q=80&w=1974&auto=format&fit=crop");
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 120px 5% 80px;
-}
-
-
-.banner-content h1{
-    font-size: 5rem;
-    font-family: var(--fuente-titulo);
-    letter-spacing: 3px;
-    margin-bottom: 15px;
-}
-
-
-.banner-content p{
-    color: var(--color-gris);
-    font-size: 1.1rem;
-}
-
-
-/* PLAYERS */
-
-.players{
-    padding: 100px 5%;
-}
-
-
-.players-container{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
-    gap: 35px;
-}
-
-
-.player-card{
-    background: var(--color-secundario);
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: var(--sombra);
-    transition: var(--transicion);
-}
-
-
-.player-card:hover{
-    transform: translateY(-10px);
-}
-
-
-.player-card img{
-    width: 100%;
-    height: 320px;
-    object-fit: cover;
-}
-
-
-.player-info{
-    padding: 25px;
-}
-
-
-.player-info h3{
-    font-size: 2rem;
-    margin-bottom: 10px;
-    font-family: var(--fuente-titulo);
-}
-
-
-.player-info span{
-    color: var(--color-dorado);
-    font-weight: 700;
-    display: block;
-    margin-bottom: 15px;
-}
-
-
-.player-info p{
-    color: var(--color-gris);
-}
-
-
-/* ========================= */
-/* CONTACTO */
-/* ========================= */
-
-.contact-banner{
-    min-height: 60vh;
-    background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.7)),
-    url("https://estaticos-cdn.prensaiberica.es/clip/88b10ce9-a9b8-4393-8afb-544439c0bafe_16-9-aspect-ratio_default_0_x600y225.jpg");
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 120px 5% 80px;
-}
-
-
-/* FORMULARIO */
-
-.contact{
-    padding: 100px 5%;
-}
-
-
-.contact-container{
-    max-width: 700px;
-    margin: auto;
-}
-
-
-.contact-form{
-    background: var(--color-secundario);
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: var(--sombra);
-}
-
-
-.input-group{
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 25px;
-}
-
-
-.input-group label{
-    margin-bottom: 10px;
-    font-weight: 600;
-}
-
-
-.input-group input,
-.input-group textarea{
-    padding: 15px;
-    border: none;
-    outline: none;
-    border-radius: 10px;
-    background: #1e293b;
-    color: var(--color-blanco);
-    font-size: 1rem;
-    font-family: var(--fuente-principal);
-}
-
-
-.input-group input::placeholder,
-.input-group textarea::placeholder{
-    color: var(--color-gris);
-}
-
-
-.input-group input:focus,
-.input-group textarea:focus{
-    border: 2px solid var(--color-dorado);
-}
-
-
-/* RESPONSIVE */
-
-@media(max-width:768px){
-
-    .banner-content h1{
-        font-size: 3rem;
-    }
-
-    .contact-form{
-        padding: 25px;
-    }
-
-}
-
 
 
 @media(max-width: 768px){
@@ -512,9 +294,6 @@ section{
     }
 
 }
-/* ========================= */
-/* DARK / LIGHT MODE */
-/* ========================= */
 
 #theme-toggle{
     position: fixed;
@@ -545,16 +324,13 @@ section{
 }
 
 
-/* HOVER */
-
 #theme-toggle:hover{
     transform: scale(1.1) rotate(10deg);
 }
 
 
-/* ========================= */
-/* LIGHT MODE */
-/* ========================= */
+
+/*modo oscuro */
 
 body.light-mode{
     background: #f3f4f6;
@@ -562,15 +338,12 @@ body.light-mode{
 }
 
 
-/* HEADER */
 
 body.light-mode .header{
     background: rgba(255,255,255,.98);
     box-shadow: 0 2px 10px rgba(0,0,0,.1);
 }
 
-
-/* NAVBAR */
 
 body.light-mode .navbar a,
 body.light-mode .navbar a span,
@@ -579,10 +352,6 @@ body.light-mode .navbar a i{
     font-weight: 700;
 }
 
-
-
-
-/* HERO */
 
 body.light-mode .hero{
     background:
@@ -604,7 +373,6 @@ body.light-mode .hero-content p{
 }
 
 
-/* CARDS */
 
 body.light-mode .title-card,
 body.light-mode .player-card,
@@ -614,7 +382,6 @@ body.light-mode .contact-form{
 }
 
 
-/* TEXTOS */
 
 body.light-mode .about-text p,
 body.light-mode .player-info p,
@@ -624,14 +391,10 @@ body.light-mode .banner-content p{
 }
 
 
-/* FOOTER */
 
 body.light-mode .footer{
     background: #dfe3ea;
 }
-
-
-/* BOTON LIGHT MODE */
 
 body.light-mode #theme-toggle{
     background: #111827;
