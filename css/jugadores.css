@@ -264,30 +264,50 @@ body{
     color: var(--color-gris);
 }
 
+.search-box{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
 
+.search-box input{
+    padding: 10px 40px 10px 15px;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    background: #1e293b;
+    color: white;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
 
-@media(max-width: 768px){
+.search-box input:focus{
+    width: 220px;
+    background: #334155;
+}
 
-    .navbar-container{
-        flex-direction: column;
-        gap: 20px;
-    }
+.search-box i{
+    position: absolute;
+    right: 15px;
+    color: #cbd5e1;
+    cursor: pointer;
+}
+.players-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
 
-    .navbar{
-        flex-direction: column;
-    }
-
-    .navbar ul{
-        gap: 20px;
-    }
-
-    .banner-content h1{
-        font-size: 3rem;
-    }
-
-    .section-title h2{
-        font-size: 2.2rem;
-    }
+.player-card{
+    width: 100%;
+    max-width: 380px;
+    margin: auto;
+}
+.player-card img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
 }
 
 
@@ -328,4 +348,130 @@ body.light-mode .footer{
 body.light-mode #theme-toggle{
     background: #111827;
     color: white;
+}
+
+@media(max-width: 992px){
+
+    .banner-content h1{
+        font-size: 4rem;
+    }
+
+    .players-container{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+}
+@media(max-width: 768px){
+
+    .header{
+        padding-bottom: 0;
+    }
+
+    .navbar-container{
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 20px;
+    }
+
+    .logo img{
+        width: 48px;
+    }
+
+    .navbar{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .navbar ul{
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .search-box{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .search-box input{
+        width: 100%;
+        max-width: 300px;
+    }
+
+    #theme-toggle{
+        position: static;
+        margin-top: 5px;
+
+        width: 48px;
+        height: 48px;
+        font-size: 1.2rem;
+    }
+
+    .players-banner{
+        padding-top: 300px;
+    }
+
+    .banner-content h1{
+        font-size: 3rem;
+    }
+
+    .banner-content p{
+        font-size: 1rem;
+    }
+
+    .players-container{
+        grid-template-columns: 1fr;
+    }
+
+}
+@media(max-width: 480px){
+
+    .navbar-container{
+        padding: 6px 8px;
+        gap: 6px;
+    }
+
+    .logo img{
+        width: 22px;
+    }
+
+    .navbar{
+        gap: 6px;
+    }
+
+    .navbar ul{
+        gap: 4px;
+    }
+
+    .navbar a i{
+        font-size: .85rem;
+    }
+
+    .search-box input{
+        max-width: 145px;
+        font-size: .7rem;
+        padding: 6px 28px 6px 9px;
+        border-radius: 20px;
+    }
+
+    .search-box i{
+        font-size: .75rem;
+        right: 9px;
+    }
+
+    #theme-toggle{
+        width: 32px;
+        height: 32px;
+        font-size: .8rem;
+    }
+
+    .players-banner{
+        padding-top: 180px;
+    }
+
 }

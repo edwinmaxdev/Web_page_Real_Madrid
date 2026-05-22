@@ -258,39 +258,12 @@ h2{
 }
 
 
-
-@media(max-width:768px){
-
-    .navbar-container{
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .navbar{
-        flex-direction: column;
-    }
-
-    .navbar ul{
-        gap: 20px;
-    }
-
-    .banner-content h1{
-        font-size: 3rem;
-    }
-
-    .contact-form{
-        padding: 25px;
-    }
-
-}
 /*modo oscuro*/
 
 body.light-mode{
     background: #f3f4f6;
     color: #111827;
 }
-
-
 
 
 body.light-mode .header{
@@ -302,7 +275,6 @@ body.light-mode .header{
 body.light-mode .navbar a{
     color: #111827;
 }
-
 
 
 body.light-mode .contact-banner{
@@ -354,4 +326,158 @@ body.light-mode .footer{
 body.light-mode #theme-toggle{
     background: #111827;
     color: white;
+}
+
+@media(max-width: 992px){
+
+    .banner-content h1{
+        font-size: 4rem;
+    }
+
+    .contact-container{
+        max-width: 90%;
+    }
+
+}
+
+
+@media(max-width:768px){
+
+    .header{
+        padding-bottom: 15px;
+    }
+
+    .navbar-container{
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 20px;
+    }
+
+    /* LOGO MÁS PEQUEÑO */
+    .logo img{
+        width: 45px;
+    }
+
+    .navbar{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .navbar ul{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 18px;
+    }
+
+    .navbar a{
+        font-size: .95rem;
+    }
+
+    .contact-banner{
+        min-height: 100vh;
+        padding: 220px 20px 80px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .banner-content{
+        width: 100%;
+        max-width: 700px;
+        margin: auto;
+    }
+
+    .banner-content h1{
+        font-size: 3rem;
+        line-height: 1;
+    }
+
+    .banner-content p{
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+
+    .contact{
+        padding: 80px 20px;
+    }
+
+    h2{
+        font-size: 2rem;
+    }
+
+    .contact-container{
+        width: 100%;
+    }
+
+    .contact-form{
+        padding: 25px 20px;
+        border-radius: 15px;
+    }
+
+    .input-group label{
+        font-size: .95rem;
+    }
+
+    .input-group input,
+    .input-group textarea{
+        padding: 14px;
+        font-size: .95rem;
+    }
+
+    .btn{
+        padding: 14px;
+        font-size: 1rem;
+    }
+
+    #theme-toggle{
+        width: 45px;
+        height: 45px;
+        font-size: 1rem;
+    }
+
+}
+
+
+@media(max-width:480px){
+
+    .contact-banner{
+        padding-top: 320px;
+    }
+
+    .logo img{
+        width: 38px;
+    }
+
+    .banner-content h1{
+        font-size: 2.3rem;
+    }
+
+    .banner-content p{
+        font-size: .95rem;
+    }
+
+    .navbar ul{
+        gap: 10px;
+    }
+
+    .navbar a span{
+        display: none;
+    }
+
+    .navbar a i{
+        font-size: 1.3rem;
+    }
+
+    .contact-form{
+        padding: 20px 15px;
+    }
+
+    .footer p{
+        font-size: .9rem;
+    }
+
 }

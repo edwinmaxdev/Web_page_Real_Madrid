@@ -1,6 +1,4 @@
-/* ========================= */
-/* FORMULARIO DE CONTACTO */
-/* ========================= */
+
 
 const formulario = document.getElementById("contactForm");
 
@@ -45,9 +43,7 @@ if(formulario){
 }
 
 
-/* ========================= */
-/* EFECTO HEADER AL SCROLL */
-/* ========================= */
+
 
 const header = document.getElementById("header");
 
@@ -64,9 +60,6 @@ window.addEventListener("scroll", function(){
 });
 
 
-/* ========================= */
-/* ANIMACION DE CARDS */
-/* ========================= */
 
 const cards = document.querySelectorAll(".title-card, .player-card");
 
@@ -82,9 +75,7 @@ cards.forEach(card => {
 
 });
 
-/* ========================= */
-/* DARK / LIGHT MODE */
-/* ========================= */
+
 
 const themeToggle = document.getElementById("theme-toggle");
 
@@ -94,7 +85,6 @@ if(themeToggle){
 
         document.body.classList.toggle("light-mode");
 
-        // GUARDAR MODO
         if(document.body.classList.contains("light-mode")){
             localStorage.setItem("theme", "light");
             themeToggle.innerHTML = '<i class="ri-sun-line"></i>';
@@ -105,7 +95,7 @@ if(themeToggle){
 
     });
 
-    // CARGAR MODO GUARDADO
+
     if(localStorage.getItem("theme") === "light"){
         document.body.classList.add("light-mode");
         themeToggle.innerHTML = '<i class="ri-sun-line"></i>';
